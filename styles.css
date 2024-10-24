@@ -1,0 +1,155 @@
+/* Reset default margins and paddings */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #81ecec, #a29bfe);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the container */
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+/* Styling the header */
+h1 {
+    margin: 0 0 20px;
+    color: #2d3436;
+    font-size: 2em;
+}
+
+/* Align input fields in a grid */
+.todo-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Input field styling */
+#taskNameInput, #taskDescInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-size: 1em;
+}
+
+#taskNameInput:focus, #taskDescInput:focus {
+    border-color: #74b9ff;
+}
+
+/* Button styles */
+.todo-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #0984e3;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    flex: 1;
+    font-size: 0.9em;
+}
+
+#deleteAllBtn {
+    background-color: #d63031;
+}
+
+#deleteOneBtn {
+    background-color: #fdcb6e;
+    color: #2d3436;
+}
+
+button:hover {
+    background-color: #74b9ff;
+    transform: translateY(-2px);
+}
+
+#deleteAllBtn:hover {
+    background-color: #e17055;
+}
+
+#deleteOneBtn:hover {
+    background-color: #ffeaa7;
+}
+
+/* Task list styling */
+#taskList {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Individual task item */
+.task-item {
+    background-color: #f9f9f9;
+    border: 1px solid #dcdde1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.task-item:hover {
+    transform: scale(1.03);
+    background-color: #f1f2f6;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Delete button on each task */
+.task-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d63031;
+    font-size: 16px;
+    padding: 0 8px;
+}
+
+.task-btn:hover {
+    color: #e17055;
+}
+
+.task-details {
+    text-align: left;
+    font-size: 0.9em;
+    color: #636e72;
+}
